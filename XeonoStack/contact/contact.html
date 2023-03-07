@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- adding the google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
+
+    <!-- adding the css file -->
+    <link rel="stylesheet" href="./contact.css" />
+    <title>Hospital Page</title>
+</head>
+<body>
+    <!-- creating the navigation menu -->
+    <nav>
+        <img src="../images/logo.png" alt="logo">
+        <a href="/"></a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact/contact.html">Contact Us</a></li>
+            <li><button type="button"><a href="/Login/Login.html">Login</a></button></li>
+        </ul>
+    </nav>
+
+    <!-- creating the main section -->
+    <main>
+       <!-- creating the contact form --> 
+       <form >
+            <h1>Contact Form</h1>
+
+        <div>
+            <label >Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+
+        <div>
+            <label >Email</label>
+            <input type="text"  id="email" placeholder="Enter your email">
+        </div>
+
+        <div>
+            <label >Message</label>
+            <textarea  id="message" placeholder="Enter your message"></textarea>
+        </div>
+
+        <button type="button"  onclick="submitForm()">Submit</button>
+       </form>
+    </main>
+</body>
+
+<script>
+    function submitForm() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  if (name == "" || email == "" || message == "") {
+    alert("Please fill in all fields.");
+  } else {
+    alert("Message sent successfully!");
+  };
+}
+
+</script>
+</html>
